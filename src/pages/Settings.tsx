@@ -6,6 +6,7 @@ import { setCachedUsdaKey } from '../services/usda';
 
 export default function Settings({ theme, setTheme }: { theme?: 'light'|'dark'|'high-contrast-dark'; setTheme?: (t:'light'|'dark'|'high-contrast-dark') => void }){
   const [usdaKey, setUsdaKey] = useState('');
+  const [showKey, setShowKey] = useState(false);
   const [threshold, setThreshold] = useState<number>(0.3);
   const [saving, setSaving] = useState(false);
   const [status, setStatus] = useState('');
@@ -91,7 +92,10 @@ export default function Settings({ theme, setTheme }: { theme?: 'light'|'dark'|'
       <h2>Settings</h2>
       <div className="product-card">
         <label htmlFor="usda-key">USDA FoodData Central API Key (stored locally)</label>
-        <input id="usda-key" aria-label="USDA API Key" value={usdaKey} onChange={e=>setUsdaKey(e.target.value)} placeholder="Paste API key here" />
+        <div style={{display:'flex',gap:8,alignItems:'center',marginTop:6}}>
+          <input id="usda-key" aria-label="USDA API Key" type={showKey ? 'text' : 'password'} value={usdaKey} onChange={e=>setUsdaKey(e.target.value)} placeholder="Paste API key here" style={{flex:1}} />
+          <button className="icon-small" type="button" onClick={()=>setShowKey(s=>!s)} aria-label={showKey ? 'Hide API key' : 'Show API key'}>{showKey ? '🙈' : '👁️'}</button>
+        </div>
         <div className="settings-actions" style={{marginTop:8}}>
           <button onClick={save}>Save key</button>
           <button onClick={clearKey} className="danger">Clear key</button>
