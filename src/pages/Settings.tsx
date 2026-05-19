@@ -140,6 +140,8 @@ export default function Settings({ theme, setTheme }: { theme?: 'light'|'dark'|'
           <DiagnosticsPanel />
         </div>
 
+        <div style={{marginTop:12,fontSize:12,color:'#666'}}>App icon: 'Bibimbap' by justicon.</div>
+
         {status && <div style={{marginTop:8}}>{status}</div>}
       </div>
     </div>
