@@ -11,11 +11,11 @@ export function normalizeIngredients(text?:string){
 }
 
 const SYNONYMS: Record<string,string[]> = {
-  'milk': ['milk','lactose','whey','casein','buttermilk','milk powder'],
+  'dairy': ['milk','milk powder','milk protein','casein','caseinate','lactose','whey','buttermilk','cream','butter','ghee','cheese','yogurt','kefir','curd'],
   'peanut': ['peanut','peanuts','arachis','groundnut'],
-  'soy': ['soy','soya','soybean','soy lecithin'],
+  'soy': ['soy','soya','soybean','soy lecithin','soy protein'],
   'egg': ['egg','albumen','egg white','egg yolk'],
-  'tree nut': ['almond','walnut','pecan','cashew','hazelnut','pistachio']
+  'tree nut': ['almond','walnut','pecan','cashew','hazelnut','pistachio','macadamia','brazil nut']
 };
 
 const TERM_TO_CANON: Record<string,string> = {};
