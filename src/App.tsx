@@ -32,8 +32,10 @@ export default function App(){
           <nav className="tabs" role="tablist" aria-label="Main navigation">
             <button className={`tab-button ${route==='scan'?'tab-button--active':''}`} role="tab" aria-selected={route==='scan'} onClick={()=>setRoute('scan')}>Scan</button>
             <button className={`tab-button ${route==='profiles'?'tab-button--active':''}`} role="tab" aria-selected={route==='profiles'} onClick={()=>setRoute('profiles')}>Profiles</button>
-            <button className={`tab-button ${route==='settings'?'tab-button--active':''}`} role="tab" aria-selected={route==='settings'} onClick={()=>setRoute('settings')}>Settings</button>
           </nav>
+        </div>
+        <div className="header-right">
+          <button className="settings-gear" onClick={()=>setRoute('settings')} title="Settings" aria-label="Open settings">⚙️</button>
         </div>
       </header>
       <main>

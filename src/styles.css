@@ -40,6 +40,10 @@ button:focus,input:focus{outline:3px solid rgba(17,157,164,0.6);outline-offset:2
 .icon-button{ background:transparent; border:1px solid rgba(255,255,255,0.12); color:#fff; padding:6px 8px; border-radius:8px; cursor:pointer; font-size:18px; }
 .icon-button:focus{ outline:3px solid rgba(17,157,164,0.6); outline-offset:2px; }
 
+.header-right{ margin-left:auto; display:flex; align-items:center; }
+.settings-gear{ background:transparent; border:none; color:#fff; font-size:20px; padding:6px 8px; border-radius:8px; cursor:pointer; }
+.settings-gear:focus{ outline:3px solid rgba(17,157,164,0.6); outline-offset:2px; }
+
 /* Small icon buttons used in lists */
 .icon-small{ background:transparent; border:none; padding:6px; border-radius:6px; cursor:pointer; font-size:14px; }
 .icon-small:focus{ outline:3px solid rgba(17,157,164,0.6); outline-offset:2px; }
