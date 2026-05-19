@@ -1,12 +1,40 @@
 {
-  "name":"Allergy Scanner",
-  "short_name":"AllergyScan",
-  "start_url":"./",
-  "display":"standalone",
-  "background_color":"#D7D9CE",
-  "theme_color":"#119DA4",
-  "icons":[
-    {"src":"icon-192.png","sizes":"192x192","type":"image/png"},
-    {"src":"icon-512.png","sizes":"512x512","type":"image/png"}
+  "name": "Allergy Scanner",
+  "short_name": "AllergyScan",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#D7D9CE",
+  "theme_color": "#119DA4",
+  "icons": [
+    {
+      "type": "image/png",
+      "sizes": "16x16",
+      "src": "icon-16.png"
+    },
+    {
+      "type": "image/png",
+      "sizes": "32x32",
+      "src": "icon-32.png"
+    },
+    {
+      "type": "image/png",
+      "sizes": "48x48",
+      "src": "icon-48.png"
+    },
+    {
+      "type": "image/png",
+      "sizes": "192x192",
+      "src": "icon-192.png"
+    },
+    {
+      "type": "image/png",
+      "sizes": "256x256",
+      "src": "icon-256.png"
+    },
+    {
+      "type": "image/png",
+      "sizes": "512x512",
+      "src": "icon-512.png"
+    }
   ]
 }
