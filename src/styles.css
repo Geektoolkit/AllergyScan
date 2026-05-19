@@ -57,6 +57,10 @@ button:focus,input:focus{outline:3px solid rgba(17,157,164,0.6);outline-offset:2
 .input-with-button input{ flex:1; min-width:0; }
 .input-with-button .icon-small{ flex:0 0 40px; width:40px; height:40px; padding:6px; display:inline-flex; align-items:center; justify-content:center; font-size:18px; }
 
+/* Allergen input should expand and keep Add button beside it */
+.allergen-input { flex:1; min-width:0; width:auto; }
+.allergen-input + button, .allergen-input + .icon-small { width:auto; flex:0 0 auto; }
+
 /* Diagnostics actions */
 .diag-actions{ display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
 .diag-actions button.danger{ background:#c62828; color:#fff; border:none; padding:8px 12px; border-radius:6px; }
@@ -82,23 +86,11 @@ button:focus,input:focus{outline:3px solid rgba(17,157,164,0.6);outline-offset:2
   --ok-color: #b9ffb9; /* light green for dark theme */
 }
 
-/* High contrast dark */
-.theme-high-contrast {
-  --bg: #000000;
-  --dark: #ffffff;
-  --primary: #ffd400;
-  --secondary: #ffea00;
-  --accent: #ffd400;
-  --card-bg: #000000;
-  --card-border: 2px solid #fff;
-  --match-color: #00ff7f; /* bright green/yellow for high contrast */
-  --ok-color: #00ff7f;
-}
 
 /* ensure header tabs are visible on dark background */
-.theme-dark .tabs, .theme-high-contrast .tabs { background: rgba(255,255,255,0.04); }
-.theme-dark .tab-button, .theme-high-contrast .tab-button { color: var(--dark); }
-.theme-dark .tab-button--active, .theme-high-contrast .tab-button--active { box-shadow: 0 2px 6px rgba(0,0,0,0.4); }
+.theme-dark .tabs { background: rgba(255,255,255,0.04); }
+.theme-dark .tab-button { color: var(--dark); }
+.theme-dark .tab-button--active { box-shadow: 0 2px 6px rgba(0,0,0,0.4); }
 
 /* Responsive: mobile layout */
 @media (max-width: 600px) {

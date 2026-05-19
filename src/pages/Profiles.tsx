@@ -21,13 +21,13 @@ function AllergensEditor({ allergens, onAdd, onRemove, profileName }:{ allergens
       )}
 
       <div style={{marginTop:8,display:'flex',gap:8}}>
-        <input
+        <input className="allergen-input"
           value={input}
           onChange={e=>setInput(e.target.value)}
           placeholder="Add allergen (e.g., milk)"
           aria-label={`Add allergen for ${profileName || 'profile'}`}
           onKeyDown={e=>{ if(e.key === 'Enter'){ const v = input.trim(); if(v){ onAdd(v); setInput(''); } } }}
-          style={{flex:1}}
+          style={{flex:1,minWidth:0}}
         />
         <button onClick={()=>{ const v = input.trim(); if(!v) return; onAdd(v); setInput(''); }} title="Add allergen">Add</button>
       </div>

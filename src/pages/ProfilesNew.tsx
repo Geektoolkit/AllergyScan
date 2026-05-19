@@ -20,7 +20,7 @@ function AllergensEditor({ profile, onAdd, onRemove }: { profile: Profile; onAdd
         <div style={{color:'#666'}}>No allergens</div>
       )}
       <div style={{marginTop:8,display:'flex',gap:8}}>
-        <input value={input} onChange={e=>setInput(e.target.value)} placeholder="Add allergen" />
+        <input className="allergen-input" value={input} onChange={e=>setInput(e.target.value)} placeholder="Add allergen" style={{flex:1,minWidth:0}} />
         <button onClick={()=>{ if(!input.trim()) return; onAdd(input.trim()); setInput(''); }} title="Add">➕</button>
       </div>
     </div>
