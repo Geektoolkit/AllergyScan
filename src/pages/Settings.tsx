@@ -92,9 +92,9 @@ export default function Settings({ theme, setTheme }: { theme?: 'light'|'dark'|'
       <h2>Settings</h2>
       <div className="product-card">
         <label htmlFor="usda-key">USDA FoodData Central API Key (stored locally)</label>
-        <div style={{display:'flex',gap:8,alignItems:'center',marginTop:6}}>
-          <input id="usda-key" aria-label="USDA API Key" type={showKey ? 'text' : 'password'} value={usdaKey} onChange={e=>setUsdaKey(e.target.value)} placeholder="Paste API key here" style={{flex:1}} />
-          <button className="icon-small" type="button" onClick={()=>setShowKey(s=>!s)} aria-label={showKey ? 'Hide API key' : 'Show API key'}>{showKey ? '🙈' : '👁️'}</button>
+        <div className="input-with-button" style={{display:'flex',gap:8,alignItems:'center',marginTop:6}}>
+          <input id="usda-key" aria-label="USDA API Key" type={showKey ? 'text' : 'password'} value={usdaKey} onChange={e=>setUsdaKey(e.target.value)} placeholder="Paste API key here" style={{flex:1, minWidth:0}} />
+          <button className="icon-small reveal-btn" type="button" onClick={()=>setShowKey(s=>!s)} aria-label={showKey ? 'Hide API key' : 'Show API key'}>{showKey ? '🙈' : '👁️'}</button>
         </div>
         <div className="settings-actions" style={{marginTop:8}}>
           <button onClick={save}>Save key</button>
