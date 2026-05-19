@@ -171,8 +171,8 @@ export default function ProfilesDraggable(){
 
       <div className="product-card" style={{marginBottom:12}}>
         <div style={{display:'flex',gap:8,alignItems:'center'}}>
-          <input placeholder="Person's name" value={newName} onChange={e=>setNewName(e.target.value)} style={{flex:1}} aria-label="New profile name" />
-          <button onClick={addProfile} style={{marginLeft:8}} disabled={!newName.trim()}>Create profile</button>
+          <input placeholder="Person's name" value={newName} onChange={e=>setNewName(e.target.value)} style={{flex:1,minWidth:120,padding:'10px 12px',fontSize:15}} aria-label="New profile name" />
+          <button onClick={addProfile} style={{marginLeft:8,padding:'8px 12px',fontSize:14}} disabled={!newName.trim()}>Create profile</button>
         </div>
         <div style={{marginTop:8,color:'#666',fontSize:13}}>Create people here; click a name to edit or drag to reorder.</div>
       </div>
