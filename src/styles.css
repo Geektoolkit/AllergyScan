@@ -48,6 +48,10 @@ button:focus,input:focus{outline:3px solid rgba(17,157,164,0.6);outline-offset:2
 .settings-actions{ display:flex; gap:8px; align-items:center; }
 .settings-actions button.danger{ background:#c62828; color:#fff; border:none; padding:8px 12px; border-radius:6px; }
 
+/* Diagnostics actions */
+.diag-actions{ display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+.diag-actions button.danger{ background:#c62828; color:#fff; border:none; padding:8px 12px; border-radius:6px; }
+
 
 /* Draggable profile cards */
 .profile-card[draggable="true"]{ cursor:grab; }

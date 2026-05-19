@@ -39,9 +39,9 @@ export default function DiagnosticsPanel(){
   return (
     <div style={{marginTop:12}}>
       <h3 style={{margin:0}}>Diagnostics</h3>
-      <div style={{marginTop:8}}>
+      <div className="diag-actions" style={{marginTop:8}}>
         <button onClick={seedProfiles}>Seed sample profiles</button>
-        <button onClick={clearProfiles} style={{marginLeft:8}}>Clear profiles</button>
+        <button onClick={clearProfiles} className="danger">Clear profiles</button>
       </div>
 
       <div style={{marginTop:8}}>
