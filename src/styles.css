@@ -81,3 +81,15 @@ button:focus,input:focus{outline:3px solid rgba(17,157,164,0.6);outline-offset:2
 .theme-dark .tabs, .theme-high-contrast .tabs { background: rgba(255,255,255,0.04); }
 .theme-dark .tab-button, .theme-high-contrast .tab-button { color: var(--dark); }
 .theme-dark .tab-button--active, .theme-high-contrast .tab-button--active { box-shadow: 0 2px 6px rgba(0,0,0,0.4); }
+
+/* Responsive: mobile layout */
+@media (max-width: 600px) {
+  .app-header { flex-direction: column; align-items: stretch; gap:8px; }
+  .tabs { width:100%; justify-content: space-between; }
+  .header-actions { align-self: flex-end; }
+  .product-card { margin:8px; padding:10px; }
+  .tab-button { font-size:14px; padding:8px 10px; }
+  .search-row { flex-direction: column; align-items: stretch; }
+  input, button { width:100%; box-sizing:border-box; }
+  .allergen-list { margin-left:0; }
+}
