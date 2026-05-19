@@ -92,9 +92,9 @@ export default function Settings({ theme, setTheme }: { theme?: 'light'|'dark'|'
       <div className="product-card">
         <label htmlFor="usda-key">USDA FoodData Central API Key (stored locally)</label>
         <input id="usda-key" aria-label="USDA API Key" value={usdaKey} onChange={e=>setUsdaKey(e.target.value)} placeholder="Paste API key here" />
-        <div style={{marginTop:8}}>
+        <div className="settings-actions" style={{marginTop:8}}>
           <button onClick={save}>Save key</button>
-          <button onClick={clearKey} style={{marginLeft:8, background:'#c62828'}}>Clear key</button>
+          <button onClick={clearKey} className="danger">Clear key</button>
         </div>
 
         <div style={{marginTop:12}}>
